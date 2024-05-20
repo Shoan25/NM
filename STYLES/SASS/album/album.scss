@@ -1,0 +1,193 @@
+.contenedor-pagina-album{
+    height: calc(100% - 70px);
+    border-bottom-left-radius: 10.5px;
+    /* Borde redondeado inferior izquierdo */
+    border-bottom-right-radius: 10.5px;
+    /* Borde redondeado inferior derecho */
+    /* Estilos para el contenedor principal */
+    padding-right: 0.1px;
+    overflow-y: overlay;
+    /* Scrollbar sobre el contenido */
+    scrollbar-color: #5e5e5e #161616;
+    /* Color de la barra y fondo del scroll */
+    padding-top: 13px;
+
+    background-color: #121212;
+}
+
+
+.contenedor-derecho {
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: #e95b14;
+}
+
+.contenedor-encabezado-album{
+    margin-top: -13px;
+    padding: 16px 16px;
+    height: 204px;
+    padding-left: 16px;
+    background-image: linear-gradient(#dc5f20 40px, #7b3511 230px);
+
+    
+}
+.contenedor-encabezado{
+    background-color: #10101085;
+}
+
+.contenido-album{
+    height: auto;
+    min-height: 409px;
+
+    background-image: linear-gradient(#622a0e 10px, #121212 230px);
+
+    padding: 1px 21px;
+}
+
+.contenedor-encabezado-album{
+    display: flex;
+    align-items: center;
+
+}
+
+.contenedor-imagen-encabezado-album{
+    margin-top: 10px;
+    margin-left: 7px;
+    display: inline-block;
+    border-radius: 8px; /* Esquinas ligeramente redondeadas */
+    overflow: hidden; /* Asegura que la imagen no se desborde del contenedor */
+    box-shadow: 
+    0 30px 40px rgba(0, 0, 0, 0.2), /* Sombra más grande abajo */
+        0 20px 30px rgba(0, 0, 0, 0.15), /* Sombra secundaria abajo */
+        0 -15px 25px rgba(0, 0, 0, 0.1), /* Sombra más grande arriba */
+        -20px 0 30px rgba(0, 0, 0, 0.1), /* Sombra más grande a la izquierda */
+        20px 0 30px rgba(0, 0, 0, 0.1);  /* Sombra más grande a la derecha */
+}
+
+.contenedor-imagen-encabezado-album img{
+    display: block;
+    height: 185px;
+    width: 185px;
+}
+
+.contenido-encabezado{
+    margin-top: 38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 36px 10px;
+    margin-left: 8px;
+}
+
+.info-album{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    margin-left: 3px;
+}
+
+.contenedor-texto-info{
+    margin-left: 2px;
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.contenedor-circular-img-perfil{
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.contenedor-circular-img-perfil img{
+    display: block;
+    height: 23px;
+    width: 23px;
+}
+
+
+.contenido-encabezado p,
+.contenido-encabezado h1,
+.contenido-encabezado h5{
+    margin-top: 0px;
+}
+
+
+.contenido-encabezado h1{
+    font-size: 95px;
+    font-weight: 799;
+    letter-spacing: -5px;
+    margin-bottom: -32px;
+}
+
+.contenido-encabezado p{
+    word-spacing: -1px;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+}
+
+.contenido-encabezado h5{
+    margin-left: -4px;
+    margin-top: 9px;
+    font-size: 14px;
+    padding: 10px 9px;
+    margin-right: -4px;
+    letter-spacing: 0.2px;
+
+}
+
+
+.contenido-encabezado h4{
+    margin-top: 24px;
+    font-size: 13.5px;
+    font-weight: 510px;
+    margin-bottom: 5px;
+    margin-left: 3px;
+}
+
+
+.contenido-encabezado h5:hover{
+   text-decoration: underline;
+   cursor: pointer;
+}
+
+.punto-medio{
+    font-weight: 600;
+   
+}
+
+
+.favorite-button-2 {
+    
+    
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: transform 0.1s;
+    margin-left: 13px;
+    transition: opacity 0.2s;
+    height: 30px;
+    width: 30px;
+    margin-top: -32px;
+  
+    .heart-icon-2 {
+        fill: #8e8c99;
+
+      transition: fill 0.1s;
+    }
+  
+    &:hover {
+        margin-left: 11px;
+        margin-top: -36px;
+      transform: scale(1.1);
+  
+      .heart-icon-2 {
+        fill: #1abb54; // Spotify green color or any color you prefer
+      }
+    }
+  
+    &:focus {
+      outline: none;
+    }
+  }

@@ -1,0 +1,184 @@
+
+/* Estilos para el contenedor del contenido de música y artistas */
+.contenedor-contenido-musica-artistas {
+    height: calc(90.7% - 11px);
+    /* Altura del 85% del contenedor derecho menos el espacio */
+    background-image: linear-gradient(#1f1f1f 10px, #121212 250px);
+    /* Degradado vertical de arriba (#1f1f1f) a abajo (#121212) */
+    border-bottom-left-radius: 10.5px;
+    /* Borde redondeado inferior izquierdo */
+    border-bottom-right-radius: 10.5px;
+    /* Borde redondeado inferior derecho */
+/* Estilos para el contenedor principal */
+   
+   overflow-y: overlay; /* Scrollbar sobre el contenido */     scrollbar-color: #5e5e5e #ffffff04; /* Color de la barra y fondo del scroll */
+    padding-right: 2px;
+    padding-top: 13px;
+}
+
+
+.contenedor-artistas-populares,
+.contenedor-albumes-populares,
+.contenedor-canciones-populares {
+    margin-left: 8px;
+    margin-bottom: 37px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    /* Otros estilos comunes si los necesitas */
+   
+}
+
+.contenedor-listas-seleccionadas{
+    margin-left: 8px;
+    margin-bottom: 29px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+}
+/* Estilos para la barra de scroll */
+.contenedor-contenido-musica-artistas::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra de scroll */
+}
+
+.contenedor-contenido-musica-artistas::-webkit-scrollbar-track {
+    background-color: transparent; /* Fondo transparente del scroll */
+}
+
+.contenedor-contenido-musica-artistas::-webkit-scrollbar-thumb {
+    background-color: #000000; /* Color de la barra del scroll */
+    border-radius: 10px; /* Borde redondeado de la barra del scroll */
+}
+
+.contenedor-albumes-populares h2,
+.contenedor-canciones-populares h2,
+.contenedor-listas-seleccionadas h2,
+.contenedor-artistas-populares h2 {
+    /* Estilos para el título dentro del contenedor */
+    font-size: 22px; /* Tamaño del texto del título */
+    margin-top: 0px; /* Margen inferior para separar el título del contenido */
+    margin-left: 13.02px;
+    letter-spacing: 0px;
+}
+
+.contenedor-seccion{
+    margin-top: -12px;
+    max-height: 93%;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor-item-seccion{
+    cursor: pointer;
+    border-radius: 8.4px;
+    width: 160px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3.3px 13px;
+    padding-bottom: 6.6px;
+    position: relative;
+    width: fit-content; /* Ajusta el ancho al contenido */
+}
+
+.contenedor-item-seccion:hover{
+  
+    background-color: #1a1a1a;
+   
+}
+
+.contenedor-item-seccion:active{
+  
+    background-color: #000;
+   
+}
+.reproducir-icono {
+  position: absolute;
+  bottom:  85PX;/* Mueve el icono hacia abajo para que sobresalga */
+  right: 22px; /* Mueve el icono hacia la derecha para que sobresalga */
+  height: 44px;
+  width: 44px;
+  background-color: #1abb54;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-left: 5px;
+  transition: box-shadow 0.1s ease-in-out; /* Agrega una transición suave al cambio de tamaño del borde */
+  border: 1px solid transparent; /* Añade un borde transparente al botón */
+  display: none;
+  
+}
+
+.contenedor-item-seccion:hover .reproducir-icono {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icono-reproducir{
+    transition: transform 0.1s ease-in-out; /* Transición suave al cambio de tamaño */    
+}
+
+.reproducir-icono:hover .icono-reproducir{
+    transform: scale(1.07);
+ }
+
+
+
+.reproducir-icono:hover {
+    box-shadow: 0 0 0 1.1px #1abb54; /* Aumenta el tamaño del borde al pasar el cursor sobre el botón */
+
+}
+
+.contenedor-imagen-circular {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: #342c2c; /* Color gris oscuro opcional */
+    overflow: hidden; /* Para recortar la imagen que exceda el contenedor */
+    margin-top: 10.2px;
+    margin-bottom: -2px;
+  
+  }
+  .contenedor-imagen-cuadrada {
+    width: 160px;
+    height: 160px;
+    border-radius: 8px;
+    background-color: #342c2c; /* Color gris oscuro opcional */
+    overflow: hidden; /* Para recortar la imagen que exceda el contenedor */
+    margin-top: 10.2px;
+    margin-bottom: -2px;
+  
+  }
+  .contenedor-imagen-cuadrada img,
+  .contenedor-imagen-circular img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  
+  .nombre-item-seccion{
+    
+    letter-spacing: 0.3px;
+
+    font-size: 14px;
+    font-weight: 670;
+    margin-bottom: 0px;
+   
+  }
+
+  .nombre-seccion{
+    letter-spacing: 0.3px;
+    color: #A7A7A7;
+    font-size: 13.4px;
+    font-weight: 520;
+    margin-top: 11px;
+    margin-bottom: 0px;
+    
+
+  }

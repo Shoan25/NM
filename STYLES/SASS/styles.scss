@@ -1,0 +1,92 @@
+@import "../SASS/landingPage/landingPage.scss";
+@import "../SASS/cantante/cantante.scss";
+@import "../SASS/album/album.scss";
+
+/*
+comando watch sass
+sass --watch STYLES/SASS/styles.scss STYLES/CSS/styles.css
+*/
+
+/* Estilos generales */
+body {
+    
+    background-color: #000; // Color de fondo negro
+    margin: 0; // Elimina el margen predeterminado
+    color: #fff; // Color de texto blanco
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    /* Fuente principal */
+    font-size: 16px;
+    /* Tamaño de fuente predeterminado */
+    font-weight: 400;
+    /* Peso de la fuente normal */
+    letter-spacing: 0.6px;
+    /* Espaciado entre letras */
+}
+
+
+/* Estilo para títulos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    /* Peso de la fuente más grueso para títulos */
+}
+
+
+.contenedor-todo{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-items: center;
+}
+
+.reproductor-audio {
+    width: calc(100% - 14px);
+    background-color: #f1f3f4;
+    padding-left: calc(15% - 7px);
+    padding-right: calc(15% - 7px);
+
+    box-sizing: border-box;
+    margin: 0px 7px;
+
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+  }
+  audio {
+    margin-left: 20px;
+    width: 50%;
+    background-color: #f1f3f4;
+    color: white;
+    border: none;
+  }
+ /* Contenedor de los botones de control */
+ .controls {
+    display: flex; /* Utiliza flexbox para el diseño */
+    justify-content: center; /* Centra los botones horizontalmente */
+    margin-left: 10px; /* Espaciado izquierdo */
+    align-items: center;
+  }
+
+  /* Estilos de los botones de control */
+  .control-button {
+    margin: 0 5px; /* Espaciado horizontal entre botones */
+    cursor: pointer; /* Cursor de mano para indicar que es clicable */
+    color: black; /* Color de los íconos de los botones */
+    border: none; /* Sin borde */
+    background: transparent; /* Fondo transparente */
+    font-size: 13px; /* Tamaño de fuente grande para los íconos */
+    outline: none; /* Sin borde de enfoque */
+    height: 35px;
+    min-width: 35px;
+  }
+
+  .control-button:hover{
+    background-color: #e5e7e8;
+    border-radius: 50%;
+  }

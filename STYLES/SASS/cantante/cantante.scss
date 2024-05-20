@@ -1,0 +1,36 @@
+@import "contenedorCancionesAlbumesArtista.scss";
+@import "iconosBotones.scss";
+@import "encabezadoCantante.scss";
+@import "canciones.scss";
+@import "albumes.scss";
+
+.contenido-cantante {
+    height: calc(100% - 70px);
+    border-bottom-left-radius: 10.5px;
+    /* Borde redondeado inferior izquierdo */
+    border-bottom-right-radius: 10.5px;
+    /* Borde redondeado inferior derecho */
+    /* Estilos para el contenedor principal */
+    padding-right: 0.1px;
+    overflow-y: overlay;
+    /* Scrollbar sobre el contenido */
+    scrollbar-color: #5e5e5e #161616;
+    /* Color de la barra y fondo del scroll */
+    padding-top: 13px;
+}
+
+.contenedor-derecho {
+   
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    
+}
+
+
+.sub-titulo {
+    font-size: 22.6px;
+    letter-spacing: -1px;
+    margin-top: -1px;
+    margin-bottom: 18px;
+}

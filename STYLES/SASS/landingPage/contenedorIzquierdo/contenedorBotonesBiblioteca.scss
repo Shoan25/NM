@@ -1,0 +1,138 @@
+
+.contenedor-botones-biblioteca {
+    height: 9.8%;
+    /* Utiliza vh (viewport height) para especificar el porcentaje de la altura del viewport */
+    display: flex;
+    justify-content: space-between;
+    /* Distribuye los elementos a lo largo del contenedor */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    gap: 10px;
+    /* Espacio entre los botones */
+    padding: 3px 18px;
+}
+
+.boton-crear-lista:hover::before {
+    background: #1a1a1a;
+    /* Cambia el fondo a blanco al pasar el mouse */
+}
+
+.logoBtnBiblioteca {
+    margin-top: -1.422px;
+    height: 24.5px;
+
+    fill: #a7a7a7;
+    stroke-width: 2;
+    margin-right: 9px;
+}
+
+.boton-ir-biblioteca {
+    margin-top: 0.5px;
+    margin-left: 9px;
+    padding: 10px 0px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    padding-right: 10%;
+
+    color: #a7a7a7;
+    border: none;
+    cursor: pointer;
+    transition: color 0.1s, font-size 0.1s;
+    font-weight: 700;
+    font-size: 14.8px;
+    /* Tamaño de fuente para los botones */
+    letter-spacing: 0.6px;
+    position: relative;
+    /* Añadido para posicionar el mensaje correctamente */
+
+}
+
+.boton-ir-biblioteca:hover {
+    color: #fff;
+    font-weight: 780;
+
+    .logoBtnBiblioteca {
+
+
+        fill: #fff;
+
+    }
+}
+
+/* Estilos del mensaje al hacer hover */
+.boton-ir-biblioteca:hover::before {
+    content: "Ir a tu biblioteca";
+    width: 137px;
+    display: block;
+    position: absolute;
+    top: -25px;
+    left: 41%;
+    transform: translateX(-50%);
+    background-color: #282828;
+    color: #fff;
+    padding: 5px 0px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+
+.boton-crear-lista {
+    background: none;
+    border: none;
+    fill: #a7a7a7;
+    position: relative;
+    padding: 2.5px;
+    /* Espacio alrededor del icono */
+    cursor: pointer;
+
+}
+
+.boton-crear-lista svg {
+    display: block;
+    transition: transform 0.3s ease;
+    /* Agrega una transición suave */
+
+}
+
+.boton-crear-lista:hover svg {
+    fill: #fff;
+    background-color: #1a1a1a;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #1a1a1a;
+
+}
+
+.boton-crear-lista:hover::before {
+    content: 'Crear lista';
+    /* Texto del mensaje */
+    width: 75px;
+    font-weight: 600;
+    display: block;
+    position: absolute;
+
+    top: -34px;
+    /* Distancia del mensaje hacia arriba */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #282828;
+    /* Color de fondo del mensaje */
+    color: #fff;
+    /* Color del texto */
+    padding: 5.4px;
+    /* Espaciado dentro del mensaje */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    font-size: 13px;
+    /* Tamaño del texto */
+    transition: opacity 0.3s ease;
+    /* Agrega una transición suave a la opacidad */
+    opacity: 0;
+    /* Inicialmente invisible */
+
+}
+
+.boton-crear-lista:hover::before {
+    opacity: 1;
+    /* Hace visible el mensaje al hacer hover */
+}

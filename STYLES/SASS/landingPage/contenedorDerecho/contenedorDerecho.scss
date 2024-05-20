@@ -1,0 +1,22 @@
+@import "contenedorEncabezado";
+@import "contenedorContenidoMusicaArtistas";
+
+/* Estilos para el contenedor izquierdo */
+.contenedor-derecho {
+   
+    width: calc(76.72% - 6.6px);
+    /* Ancho del 25% del contenedor principal */
+   
+    height: calc(100% - 6px);
+
+
+   
+    /* Altura del 100% del contenedor principal */
+    background-color: #4b444400;
+    /* Color de fondo gris oscuro */
+    float: right;
+    /* Para alinear a la derecha */
+    border-radius: 10px;
+    /* Bordes redondeados de 5px */
+
+}

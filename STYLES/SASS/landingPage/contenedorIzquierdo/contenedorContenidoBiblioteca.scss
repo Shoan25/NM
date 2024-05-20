@@ -1,0 +1,64 @@
+.contenedor-contenido-biblioteca{
+    height: 85.8%;
+    background-color: #242424;
+    margin: 7px 9px; 
+    border-radius: 8px;
+    align-items: flex-start;
+display: flex;
+flex-direction: column;
+
+    h2 {
+        
+        margin: 0px 22px;
+        margin-top: 24px;
+        font-size: 16px;
+        margin-bottom: 11px;
+    }
+
+    p {
+        margin: 0px 22px;
+        line-height: 16.2px; /* Espaciado de 24px entre líneas */
+        font-size: 13.25px;
+        font-weight: 500;
+        margin-right: 70px;
+
+    }
+
+    .contenedor-botones {
+        margin-top: 15px;
+    margin-left: 10px;
+        display: flex;
+        gap: 10px; /* Espacio entre los botones */
+        align-items: center;
+        .boton-login {
+            background-color: #fff;
+            color: #000;
+            border: none;
+            border-radius: 60px;
+            width: 120px;
+            height: 35px;
+            cursor: pointer;
+            transition: background-color 0.3s, font-size 0.3s;
+            font-weight: 700;
+            font-size: 13.6px;
+            letter-spacing: 0.4px;
+
+            &:hover {
+                background-color: #f3f3f3;
+                
+                transform: scale(1.02);
+               
+            }
+        }
+        .boton-registrarte{
+            font-size: 14px;
+
+            margin-right: -25px;
+            &:hover {
+                
+                transform: scale(1.01);
+               
+            }
+        }
+    }
+}

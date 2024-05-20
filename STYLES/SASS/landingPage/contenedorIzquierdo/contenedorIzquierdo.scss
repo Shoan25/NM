@@ -1,0 +1,109 @@
+@import "contenedorBiblioteca";
+
+/* Estilos para el contenedor izquierdo */
+.contenedor-izquierda {
+    max-width: 23.2%;
+    /* Ancho del 23.5% del contenedor principal */
+    height: calc(100% - 1px);
+    
+    /* Altura del 100% del contenedor principal */
+    background-color: #ffffff00;
+    /* Color de fondo gris oscuro */
+    float: left;
+    /* Para alinear a la izquierda */
+    border-radius: 5px;
+    /* Bordes redondeados de 5px */
+
+}
+
+/* Estilos para el contenedor del menú */
+.contenedor-menu {
+    height: 24.6%;
+    /* Altura del 20% del contenedor izquierdo */
+    background-color: #121212;
+    /* Color de fondo gris oscuro */
+    margin-bottom: 7.29px;
+    /* Espacio de 7px hacia abajo */
+    border-radius: 11px;
+    /* Bordes redondeados de 12px */
+    display: flex;
+    flex-direction: column;
+    /* Organizar elementos en columna */
+    align-items: flex-start;
+    /* Alinear elementos a la izquierda */
+    justify-content: space-between;
+    /* Espacios equitativos entre elementos */
+}
+
+
+/* Estilos para el logo y el texto */
+.logo-texto {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+    margin-bottom: 6px;
+}
+
+/* Estilos para el logo */
+.logo {
+    height: 25px;
+}
+
+
+.texto {
+    margin-left: 10px;
+    color: #fff;
+    /* Color de texto gris oscuro */
+    font-size: 14.9px;
+    /* Tamaño de fuente */
+    font-weight: 780;
+    /* Peso de la fuente */
+    letter-spacing: 0.8px;
+    /* Espaciado entre letras */
+}
+
+.logoBtn {
+    margin-top: -3px;
+    height: 24.5px;
+    stroke: #a7a7a7;
+    fill: none;
+    stroke-width: 2;
+    margin-right: 17px;
+}
+
+/* Estilos para los botones del menú */
+.boton-menu {
+    padding: 10px 0px;
+    display: flex;
+    align-items: center;
+    margin-left: 22px;
+    background-color: transparent;
+    padding-right: 50%;
+    color: #a7a7a7;
+    border: none;
+    cursor: pointer;
+    transition: color 0.1s, font-size 0.1s;
+    font-weight: 700;
+    font-size: 14.8px;
+    /* Tamaño de fuente para los botones */
+    letter-spacing: 0.6px;
+}
+
+.espacio-contenedor-menu {
+    height: 3%;
+}
+
+/* Estilos para los botones del menú al pasar el cursor */
+.boton-menu:hover {
+    color: #fff;
+    font-weight: 780;
+
+    .logoBtn {
+
+        stroke: #fff;
+
+    }
+}
+
+

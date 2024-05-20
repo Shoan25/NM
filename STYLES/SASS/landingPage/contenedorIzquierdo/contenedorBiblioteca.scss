@@ -1,0 +1,12 @@
+@import "contenedorBotonesBiblioteca";
+@import "contenedorContenidoBiblioteca";
+
+/* Estilos para el contenedor de la biblioteca */
+.contenedor-biblioteca {
+    height: calc(75.4% - 6px);
+    /* Altura del 80% del contenedor izquierdo menos el espacio */
+    background-color: #121212;
+    /* Color de fondo gris oscuro */
+    border-radius: 11px;
+    /* Bordes redondeados de 12px */
+}

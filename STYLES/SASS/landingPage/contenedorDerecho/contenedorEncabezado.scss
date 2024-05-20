@@ -1,0 +1,172 @@
+
+
+.contenedor-contenido-encabezado-landingPage{
+
+    height: 63px;
+
+}
+/* Estilos para el contenedor del encabezado */
+.contenedor-encabezado {
+    height: 100%;
+
+    /* Altura del 15% del contenedor derecho */
+    background-color: #101010f2;
+    /* Color de fondo negro */
+    border-top-left-radius: 10.5px;
+    /* Borde redondeado inferior izquierdo */
+    border-top-right-radius: 10.5px;
+    /* Borde redondeado inferior derecho */
+    display: flex;
+    /* Para usar flexbox */
+    align-items: center;
+    /* Para centrar verticalmente el contenido */
+
+}
+
+.contenedor-search {
+    height: 100%;
+    width: 63.6%;
+
+    justify-content: flex-start;
+    /* Para alinear el botón a la derecha */
+    display: flex;
+    /* Para usar flexbox */
+    align-items: center;
+    /* Para centrar verticalmente el contenido */
+    margin-right: 10.5%;
+}
+
+.contenedor-input {
+    margin-top: 1.8px;
+    height: 48%;
+    margin-left: 20.4px;
+    width: 47%;
+    min-width: 230px;
+
+    display: flex;
+    align-items: center;
+    background-color: #242424;
+    border-radius: 35px;
+    padding: 8px;
+    transition: background-color 0.3s;
+    /* Agregamos transición para suavizar el cambio de color */
+    transition: box-shadow 0.25s;
+    /* Transición para suavizar el cambio de sombra */
+}
+
+
+.contenedor-input:focus-within {
+    box-shadow: 0 0 0 2px #fff;
+    /* Simulación del borde con sombra */
+}
+
+/* Cambio de color al pasar el cursor */
+.contenedor-input:hover {
+    background-color: #2a2a2a;
+    cursor: text;
+}
+
+.input-busqueda {
+    border: none;
+    background: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 525;
+
+    outline: none;
+    width: 100%;
+    margin-left: 7px;
+}
+
+.lupa-search-encabezado {
+    margin-left: 5px;
+    stroke: #fff;
+    height: 20px;
+}
+
+
+.contenedor-login-register {
+    height: 100%;
+    margin-right: 8px;
+    display: flex;
+    /* Para usar flexbox */
+    align-items: center;
+    /* Para centrar verticalmente el contenido */
+}
+
+/* Estilos para el botón Registrarte dentro del contenedor encabezado */
+.boton-registrarte {
+    margin-top: 1.8px;
+    background-color: transparent;
+    /* Fondo transparente */
+    color: #a7a7a7;
+    /* Color de texto gris oscuro */
+    border: none;
+    /* Sin borde */
+    cursor: pointer;
+    /* Cursor de tipo manita */
+    transition: color 0.3s, font-size 0.1s;
+    /* Transición suave para color y tamaño de fuente */
+    /* Estilos anteriores para el botón Registrarte */
+    font-weight: 700;
+    /* Peso de la fuente más grueso para botones */
+    font-size: 14.7px;
+    /* Tamaño de fuente ligeramente mayor al pasar el cursor */
+    letter-spacing: 0.4px;
+    /* Espaciado entre letras */
+    padding: 12px;
+
+}
+
+/* Estilos para el botón Registrarte al pasar el cursor */
+.boton-registrarte:hover {
+    color: #fff;
+    /* Color de texto gris claro al pasar el cursor */
+    transform: scale(1.02);
+    /* Aumento de tamaño al pasar el cursor */
+}
+
+
+/* Estilos para el botón Login */
+.boton-login {
+    margin-top: 1.3px;
+    margin-left: 21px;
+    margin-right: 11px;
+    background-color: #fff;
+    /* Fondo blanco */
+    color: #000;
+    /* Color de texto negro */
+    border: none;
+    /* Sin borde */
+    border-radius: 60px;
+    /* Borde redondeado de 20px */
+    width: 160px;
+    /* Ancho aproximado de 50px */
+    height: 48px;
+    cursor: pointer;
+    /* Cursor de tipo manita */
+    transition: background-color 0.3s, font-size 0.3s;
+    /* Transición suave para color de fondo y tamaño de fuente */
+    font-weight: 700;
+    /* Peso de la fuente más grueso para botones */
+    font-size: 14.7px;
+    /* Tamaño de fuente ligeramente mayor al pasar el cursor */
+    letter-spacing: 0.4px;
+    /* Espaciado entre letras */
+
+}
+
+/* Estilos para el botón Login al pasar el cursor */
+.boton-login:hover {
+    background-color: #f3f3f3;
+    /* Fondo gris claro al pasar el cursor */
+    font-size: 18px;
+    /* Tamaño de fuente ligeramente mayor al pasar el cursor */
+    transform: scale(1.02);
+    /* Aumento de tamaño al pasar el cursor */
+    font-size: 14.8px;
+    /* Tamaño de fuente ligeramente mayor al pasar el cursor */
+    font-weight: 780;
+    /* Peso de la fuente más grueso para botones */
+
+}

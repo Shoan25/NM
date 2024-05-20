@@ -1,0 +1,16 @@
+@import "../landingPage/contenedorIzquierdo/contenedorIzquierdo.scss";
+@import "../landingPage/contenedorDerecho/contenedorDerecho.scss";
+
+
+/* Estilos para el contenedor principal */
+.contenedor-principal {
+    width: calc(100vw - 14px);
+    /* Ancho igual al ancho de la ventana menos el margen */
+    height: calc(100vh - 14px);
+    /* Altura igual al alto de la ventana menos el margen */
+    margin: 7px;
+    /* Margen de 7px a los lados, arriba y abajo */
+    background-color: #96868600;
+    /* Color de fondo gris oscuro */
+    overflow-y: hidden;
+   }

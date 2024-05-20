@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/STYLES/CSS/styles.css">
+    <!-- script del landingPage -->
+    <script type="module" src="/JS/landingPage.js"></script>
+    <!-- titulo de la pagina -->
+    <title>Next Music</title>
+    <!-- logo de la pagina -->
+    <link rel="icon" href="/IMG/spotify.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/IMG/spotify.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="contenedor-todo"><!--contenedor de todo-->
+
+        <div class="contenedor-principal"><!-- contenido del landingPage en general -->
+            <div class="contenedor-izquierda"><!-- contenido del landingPage IZQUIERDA -->
+                <div class="contenedor-menu"><!-- contenido del MENU -->
+
+                    <div class="logo-texto">
+                        <img src="/IMG/spotify.png" class="logo" height="15.3px">
+                        <span class="texto">NM</span>
+                    </div>
+
+                    <button class="boton-menu" onclick="goHome()"><!-- INICIO DE LOS BOTONES DEL MENU -->
+                        <svg class="logoBtn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30px"
+                            height="30px" fill="#000000">
+                            <path
+                                d="M12 2.25L1.71 11.29C1.38 11.63 1.25 12.12 1.38 12.57C1.5 13.02 1.87 13.37 2.32 13.5L3.5 13.94V21.75C3.5 22.44 4.06 23 4.75 23H8.25C8.66 23 9 22.66 9 22.25V17.75C9 17.34 9.34 17 9.75 17H14.25C14.66 17 15 17.34 15 17.75V22.25C15 22.66 15.34 23 15.75 23H19.25C19.94 23 20.5 22.44 20.5 21.75V13.94L21.68 13.5C22.13 13.37 22.5 13.02 22.62 12.57C22.75 12.12 22.62 11.63 22.29 11.29L12 2.25Z" />
+                        </svg>
+
+                        Inicio</button>
+
+                    <button class="boton-menu" id="boton-buscar-menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30px" height="30px"
+                            class="logoBtn" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        </svg>
+                        Buscar</button><!-- FINAL DE LOS BOTONES DEL MENU -->
+
+                    <div class="espacio-contenedor-menu"></div><!-- Espacio para ajustar los elementos del menu -->
+                </div><!-- FIN DEL MENU-->
+
+                <div class="contenedor-biblioteca"><!-- Contenido de la biblioteca -->
+                    <div class="contenedor-botones-biblioteca"><!-- botones que estan arriba de la biblioteca -->
+
+
+                        <button class="boton-ir-biblioteca" id="boton-ir-biblioteca">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                class="logoBtnBiblioteca">
+                                <path d="M2 2h3v20H2zM9 2h3v20H9zM16 6h4v14h-4z">
+                            </svg>
+                            Tu biblioteca</button>
+
+                        <button class="boton-crear-lista">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+                                <path d="M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+                            </svg>
+                        </button>
+
+
+                    </div><!--FIN botones que estan arriba de la biblioteca -->
+                    <div class="contenedor-contenido-biblioteca"><!-- Contenido de biblioteca -->
+                        <h2>Crea tu primera lista</h2>
+                        <p>Es muy fácil, crea una cuenta o inicia sesión para poder acceder a tu propia biblioteca y
+                            listas
+                            de reproduccion.</p>
+                        <div class="contenedor-botones">
+                            <button class="boton-registrarte">Registrarte</button>
+                            <button class="boton-login">Iniciar sesión</button>
+                        </div>
+                    </div>
+                </div><!-- FIN DEL Contenido de la biblioteca -->
+            </div><!-- FIN DEL CONTENEDOR IZQUIERDA -->
+            <div class="contenedor-derecho"> <!-- CONTENEDOR DERECHO -->
+
+                <div class="contenedor-encabezado" id="contenedor-encabezado"><!-- contenido del encabezado -->
+
+                    <div class="contenedor-search"><!-- contenido del cuadro de busqueda del encabezado -->
+                        <div class="contenedor-input" id="contenedor-input-header">
+
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30px" height="30px"
+                                class="lupa-search-encabezado" fill="none" stroke="black" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8" />
+                                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                            </svg>
+                            <input type="text" placeholder="¿Que quieres reproducir?" id="input-busqueda-header"
+                                class="input-busqueda">
+
+                        </div>
+                    </div><!-- FINAL DE contenido del cuadro de busqueda del encabezado -->
+
+                    <div class="contenedor-login-register">
+                        <!-- CONTENEDOR DE LOS BOTONES LOGIN REGISTER EN EL ENCABEZADO -->
+                        <button class="boton-registrarte">Registrarte</button>
+                        <button class="boton-login">Iniciar sesión</button>
+                    </div><!-- FINAL DE contenido del CONTENEDOR DE LOS BOTONES LOGIN REGISTER EN EL ENCABEZADO -->
+                </div><!-- FINAL contenido del encabezado -->
+
+                <div class="contenedor-contenido-musica-artistas" id="contenedor-contenido-musica-artistas">
+                    <!-- Contenido de la sección de música y artistas -->
+
+                    <div class="contenedor-artistas-populares"> <!-- Contenido de la sección de ARTISTAS POPULARES -->
+
+
+                        <h2>Artistas populares</h2>
+
+                        <div class="contenedor-seccion"> <!-- ARTISTAS POPULARES -->
+
+
+                            <div class="contenedor-item-seccion" onclick="setArtistaPage(`Feid`)">
+                                <!-- ARTISTA -->
+                                <div class="contenedor-imagen-circular">
+                                    <img src="/IMG/feid.jpeg" alt="Descripción de la imagen">
+                                    <div class="reproducir-icono">
+                                        <svg class="icono-reproducir" xmlns="http://www.w3.org/2000/svg" height="27"
+                                            width="32" viewBox="0 0 21 24" fill="#000">
+                                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="nombre-item-seccion">Feid</h5>
+                                <p class="nombre-seccion">Artista</p>
+                            </div><!--FIN ARTISTA -->
+
+                            <div class="contenedor-item-seccion"><!-- ARTISTA -->
+                                <div class="contenedor-imagen-circular">
+                                    <img src="/IMG/badbunny.jpeg" alt="Descripción de la imagen">
+                                    <div class="reproducir-icono">
+                                        <svg class="icono-reproducir" xmlns="http://www.w3.org/2000/svg" height="27"
+                                            width="32" viewBox="0 0 21 24" fill="#000">
+                                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="nombre-item-seccion">Bad Bunny</h5>
+                                <p class="nombre-seccion">Artista</p>
+                            </div><!--FIN ARTISTA -->
+
+                            <div class="contenedor-item-seccion"><!-- ARTISTA -->
+                                <div class="contenedor-imagen-circular">
+                                    <img src="/IMG/karolg.jpeg" alt="Descripción de la imagen">
+                                    <div class="reproducir-icono">
+                                        <svg class="icono-reproducir" xmlns="http://www.w3.org/2000/svg" height="27"
+                                            width="32" viewBox="0 0 21 24" fill="#000">
+                                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="nombre-item-seccion">Karol G</h5>
+                                <p class="nombre-seccion">Artista</p>
+                            </div><!--FIN ARTISTA -->
+
+                            <div class="contenedor-item-seccion"><!-- ARTISTA -->
+                                <div class="contenedor-imagen-circular">
+                                    <img src="/IMG/bizarrap.jpeg" alt="Descripción de la imagen">
+                                    <div class="reproducir-icono">
+                                        <svg class="icono-reproducir" xmlns="http://www.w3.org/2000/svg" height="27"
+                                            width="32" viewBox="0 0 21 24" fill="#000">
+                                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="nombre-item-seccion">Bizarrap</h5>
+                                <p class="nombre-seccion">Artista</p>
+                            </div><!--FIN ARTISTA -->
+
+                            <div class="contenedor-item-seccion"><!-- ARTISTA -->
+                                <div class="contenedor-imagen-circular">
+                                    <img src="/IMG/linkinpark.jpg" alt="Descripción de la imagen">
+                                    <div class="reproducir-icono">
+                                        <svg class="icono-reproducir" xmlns="http://www.w3.org/2000/svg" height="27"
+                                            width="32" viewBox="0 0 21 24" fill="#000">
+                                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="nombre-item-seccion">Linkin Park</h5>
+                                <p class="nombre-seccion">Artista</p>
+                            </div><!--FIN ARTISTA -->
+
+                            <div class="contenedor-item-seccion"><!-- ARTISTA -->
+                                <div class="contenedor-imagen-circular">
+                                    <img src="/IMG/tnbhd.jpg" alt="Descripción de la imagen">
+                                    <div class="reproducir-icono">
+                                        <svg class="icono-reproducir" xmlns="http://www.w3.org/2000/svg" height="27"
+                                            width="32" viewBox="0 0 21 24" fill="#000">
+                                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="nombre-item-seccion">The Neighbourhood</h5>
+                                <p class="nombre-seccion">Artista</p>
+                            </div><!--FIN ARTISTA -->
+
+
+
+                        </div> <!-- FINAL ARTISTAS POPULARES -->
+                    </div><!-- FINAL Contenido de la sección de ARTISTAS POPULARES -->
+
+                    <div class="contenedor-albumes-populares"><!-- Contenido de la sección de ALBUMES POPULARES -->
+                        <h2>Albumes populares</h2>
+                        <div class="contenedor-seccion"> <!-- CONTENEDOR DE LA SECCION -->
+
+                            <div class="contenedor-item-seccion"><!-- ALBUM -->
+                                <div class="contenedor-imagen-cuadrada">
+                                    <img src="/IMG/ferxxocalipis.jpeg" alt="Descripción de la imagen">
+                                    <div class="reproducir-icono">
+                                        <svg class="icono-reproducir" xmlns="http://www.w3.org/2000/svg" height="27"
+                                            width="32" viewBox="0 0 21 24" fill="#000">
+                                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="nombre-item-seccion">FERXXOCALIPSIS</h5>
+                                <p class="nombre-seccion">Feid</p>
+                            </div><!--FIN ALBUM -->
+
+                            <div class="contenedor-item-seccion"><!-- ALBUM -->
+                                <div class="contenedor-imagen-cuadrada">
+                                    <img src="/IMG/unveranosinticaratula.jpg" alt="Descripción de la imagen">
+                                    <div class="reproducir-icono">
+                                        <svg class="icono-reproducir" xmlns="http://www.w3.org/2000/svg" height="27"
+                                            width="32" viewBox="0 0 21 24" fill="#000">
+                                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="nombre-item-seccion">Un Verano Sin Ti</h5>
+                                <p class="nombre-seccion">Bad Bunny</p>
+                            </div><!--FIN ALBUM -->
+
+                            <div class="contenedor-item-seccion"><!-- ALBUM -->
+                                <div class="contenedor-imagen-cuadrada">
+                                    <img src="/IMG/mananaseracaratula.jpg_large" alt="Descripción de la imagen">
+                                    <div class="reproducir-icono">
+                                        <svg class="icono-reproducir" xmlns="http://www.w3.org/2000/svg" height="27"
+                                            width="32" viewBox="0 0 21 24" fill="#000">
+                                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="nombre-item-seccion">MAÑANA SERA...</h5>
+                                <p class="nombre-seccion">Karol G</p>
+                            </div><!--FIN ALBUM -->
+
+                            <div class="contenedor-item-seccion"><!-- ALBUM -->
+                                <div class="contenedor-imagen-cuadrada">
+                                    <img src="/IMG/endormirsinmadridcaratyula.jpeg" alt="Descripción de la imagen">
+                                    <div class="reproducir-icono">
+                                        <svg class="icono-reproducir" xmlns="http://www.w3.org/2000/svg" height="27"
+                                            width="32" viewBox="0 0 21 24" fill="#000">
+                                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="nombre-item-seccion">en dormir sin Madrid</h5>
+                                <p class="nombre-seccion">Bizarrap</p>
+                            </div><!--FIN ALBUM -->
+
+                            <div class="contenedor-item-seccion"><!-- ALBUM -->
+                                <div class="contenedor-imagen-cuadrada">
+                                    <img src="/IMG/onemorelightcaratula.jpeg" alt="Descripción de la imagen">
+                                    <div class="reproducir-icono">
+                                        <svg class="icono-reproducir" xmlns="http://www.w3.org/2000/svg" height="27"
+                                            width="32" viewBox="0 0 21 24" fill="#000">
+                                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="nombre-item-seccion">One More Light</h5>
+                                <p class="nombre-seccion">Linkin Park</p>
+                            </div><!--FIN ALBUM -->
+
+                            <div class="contenedor-item-seccion"><!-- ALBUM -->
+                                <div class="contenedor-imagen-cuadrada">
+                                    <img src="/IMG/hardtoimaginecaratula.jpeg" alt="Descripción de la imagen">
+                                    <div class="reproducir-icono">
+                                        <svg class="icono-reproducir" xmlns="http://www.w3.org/2000/svg" height="27"
+                                            width="32" viewBox="0 0 21 24" fill="#000">
+                                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="nombre-item-seccion">Hard To Imagine</h5>
+                                <p class="nombre-seccion">The Neighbourhood</p>
+                            </div><!--FIN ALBUM -->
+
+                        </div> <!-- FINAL CONTENEDOR DE LA SECCION -->
+                    </div><!--FINAL Contenido de la sección de ALBUMES POPULARES -->
+
+                    <div class="contenedor-canciones-populares"><!-- CANCIONES POPULARES -->
+                        <h2>Canciones populares</h2>
+
+                        <div class="contenedor-seccion"> <!-- CONTENEDOR DE LA SECCION -->
+
+
+                            <div class="contenedor-item-seccion"><!-- cancion -->
+                                <div class="contenedor-imagen-cuadrada">
+                                    <img src="/IMG/dom1ngocaratula.jpeg" alt="Descripción de la imagen">
+                                    <div class="reproducir-icono" onclick="setSong(`DOM1NGO.mp3`)">
+                                        <svg class="icono-reproducir" xmlns="http://www.w3.org/2000/svg" height="27"
+                                            width="32" viewBox="0 0 21 24" fill="#000">
+                                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="nombre-item-seccion">DOM1NGO</h5>
+                                <p class="nombre-seccion">Milo j</p>
+                            </div><!--FIN cancion -->
+
+
+                            <div class="contenedor-item-seccion"><!-- cancion -->
+                                <div class="contenedor-imagen-cuadrada">
+                                    <img src="/IMG/555(angelcaido).jpeg" alt="Descripción de la imagen">
+                                    <div class="reproducir-icono">
+                                        <svg class="icono-reproducir" xmlns="http://www.w3.org/2000/svg" height="27"
+                                            width="32" viewBox="0 0 21 24" fill="#000">
+                                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="nombre-item-seccion">555 (Angel caido)</h5>
+                                <p class="nombre-seccion">Xina Mora y Fectro</p>
+                            </div><!--FIN cancion -->
+
+
+                            <div class="contenedor-item-seccion"><!-- cancion -->
+                                <div class="contenedor-imagen-cuadrada">
+                                    <img src="/IMG/SPITINMYFACECARATULA.jpg" alt="Descripción de la imagen">
+                                    <div class="reproducir-icono">
+                                        <svg class="icono-reproducir" xmlns="http://www.w3.org/2000/svg" height="27"
+                                            width="32" viewBox="0 0 21 24" fill="#000">
+                                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="nombre-item-seccion">SPIT IN MY FACE!</h5>
+                                <p class="nombre-seccion">ThxSoMch</p>
+                            </div><!--FIN cancion -->
+
+
+                            <div class="contenedor-item-seccion"><!-- cancion -->
+                                <div class="contenedor-imagen-cuadrada">
+                                    <img src="/IMG/needscaratula.jpg" alt="Descripción de la imagen">
+                                    <div class="reproducir-icono">
+                                        <svg class="icono-reproducir" xmlns="http://www.w3.org/2000/svg" height="27"
+                                            width="32" viewBox="0 0 21 24" fill="#000">
+                                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="nombre-item-seccion">Needs</h5>
+                                <p class="nombre-seccion">Verzache</p>
+                            </div><!--FIN cancion -->
+
+
+                            <div class="contenedor-item-seccion"><!-- cancion -->
+                                <div class="contenedor-imagen-cuadrada">
+                                    <img src="/IMG/dimelocaratula.jpeg" alt="Descripción de la imagen">
+                                    <div class="reproducir-icono">
+                                        <svg class="icono-reproducir" xmlns="http://www.w3.org/2000/svg" height="27"
+                                            width="32" viewBox="0 0 21 24" fill="#000">
+                                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="nombre-item-seccion">Dimelo</h5>
+                                <p class="nombre-seccion">Paulo Londra</p>
+                            </div><!--FIN cancion -->
+
+
+                            <div class="contenedor-item-seccion"><!-- cancion -->
+                                <div class="contenedor-imagen-cuadrada">
+                                    <img src="/IMG/normalcaratula.jpeg" alt="Descripción de la imagen">
+                                    <div class="reproducir-icono">
+                                        <svg class="icono-reproducir" xmlns="http://www.w3.org/2000/svg" height="27"
+                                            width="32" viewBox="0 0 21 24" fill="#000">
+                                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="nombre-item-seccion">Normal</h5>
+                                <p class="nombre-seccion">Feid</p>
+                            </div><!--FIN cancion -->
+
+
+                        </div> <!-- FINAL CONTENEDOR DE LA SECCION -->
+
+                    </div><!-- FINAL CANCIONES POPULARES -->
+
+                    <div class="contenedor-listas-seleccionadas"><!-- LISTAS SELECCIONADAS -->
+                        <h2>Listas seleccionadas</h2>
+
+                        <div class="contenedor-seccion"> <!-- CONTENEDOR DE LA SECCION -->
+
+
+                            <div class="contenedor-item-seccion"><!-- LISTA -->
+                                <div class="contenedor-imagen-cuadrada">
+                                    <img src="/IMG/hiphop.jpeg" alt="Descripción de la imagen">
+                                    <div class="reproducir-icono">
+                                        <svg class="icono-reproducir" xmlns="http://www.w3.org/2000/svg" height="27"
+                                            width="32" viewBox="0 0 21 24" fill="#000">
+                                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="nombre-item-seccion">Hip Hop</h5>
+                                <p class="nombre-seccion">Lista perfecta para los amantes del Hip Hop</p>
+                            </div><!--FIN LISTA -->
+
+
+                            <div class="contenedor-item-seccion"><!-- LISTA -->
+                                <div class="contenedor-imagen-cuadrada">
+                                    <img src="/IMG/cernaromantica.jpeg" alt="Descripción de la imagen">
+                                    <div class="reproducir-icono">
+                                        <svg class="icono-reproducir" xmlns="http://www.w3.org/2000/svg" height="27"
+                                            width="32" viewBox="0 0 21 24" fill="#000">
+                                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="nombre-item-seccion">Cena Romantica</h5>
+                                <p class="nombre-seccion">Lista perfecta para una cena en pareja</p>
+                            </div><!--FIN LISTA -->
+
+
+                            <div class="contenedor-item-seccion"><!-- LISTA -->
+                                <div class="contenedor-imagen-cuadrada">
+                                    <img src="/IMG/regaeton2000.jpeg" alt="Descripción de la imagen">
+                                    <div class="reproducir-icono">
+                                        <svg class="icono-reproducir" xmlns="http://www.w3.org/2000/svg" height="27"
+                                            width="32" viewBox="0 0 21 24" fill="#000">
+                                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="nombre-item-seccion">Regaeton del 2000</h5>
+                                <p class="nombre-seccion">Lista para recordar los tiempos aquellos</p>
+                            </div><!--FIN LISTA -->
+
+
+                            <div class="contenedor-item-seccion"><!-- LISTA -->
+                                <div class="contenedor-imagen-cuadrada">
+                                    <img src="/IMG/relajate.jpeg" alt="Descripción de la imagen">
+                                    <div class="reproducir-icono">
+                                        <svg class="icono-reproducir" xmlns="http://www.w3.org/2000/svg" height="27"
+                                            width="32" viewBox="0 0 21 24" fill="#000">
+                                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="nombre-item-seccion">Relajate</h5>
+                                <p class="nombre-seccion">Lista perfecta para relajarte</p>
+                            </div><!--FIN LISTA -->
+
+
+                            <div class="contenedor-item-seccion"><!-- LISTA -->
+                                <div class="contenedor-imagen-cuadrada">
+                                    <img src="/IMG/lofi.jpeg" alt="Descripción de la imagen">
+                                    <div class="reproducir-icono">
+                                        <svg class="icono-reproducir" xmlns="http://www.w3.org/2000/svg" height="27"
+                                            width="32" viewBox="0 0 21 24" fill="#000">
+                                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="nombre-item-seccion">LO-FI</h5>
+                                <p class="nombre-seccion">Lista perfecta para programar</p>
+                            </div><!--FIN LISTA -->
+
+
+                            <div class="contenedor-item-seccion"><!-- LISTA -->
+                                <div class="contenedor-imagen-cuadrada">
+                                    <img src="/IMG/mejoraelanimo.png" alt="Descripción de la imagen">
+                                    <div class="reproducir-icono">
+                                        <svg class="icono-reproducir" xmlns="http://www.w3.org/2000/svg" height="27"
+                                            width="32" viewBox="0 0 21 24" fill="#000">
+                                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="nombre-item-seccion">Mejora El Animo</h5>
+                                <p class="nombre-seccion">Lista perfecta para entusiasmarte</p>
+                            </div><!--FIN LISTA -->
+
+                        </div> <!-- FINAL CONTENEDOR DE LA SECCION -->
+
+                    </div><!-- FINAL LISTAS SELECCIONADAS -->
+
+                </div> <!-- FINAL Contenido de la sección de música y artistas -->
+
+                <div class="contenido-cantante" id="contenido-cantante"><!-- CONTENIDO CANTANTE -->
+
+
+                    <div class="contenido-encabezado-cantante"><!-- encabezado CANTANTE -->
+
+
+                        <div class="contenedor-texto-encabezado">
+                            <div class="contenedor-artista-verificado">
+                                <img src="/IMG/verified.png" alt="Descripción de la imagen" height="24.5px">
+
+                                <p2>Artista Verificado</p2>
+                            </div>
+                            <h1>Feid</h1>
+                            <p>43.858.900 oyentes mensuales</p>
+                        </div>
+
+
+                    </div><!-- final encabezado CANTANTE -->
+
+
+                    <div class="contenedor-canciones-albumes-artista">
+                        <!--Contenedor de las canciones y albumes del artista-->
+
+                        <div class="contenedor-botones-canciones-cantante">
+                            <!-- contenedor de los botones del contenido artista-->
+                            <div class="fondo-icono-reproducir">
+                                <svg class="icono-reproducir2" xmlns="http://www.w3.org/2000/svg" height="25" width="32"
+                                    viewBox="0 0 21 24" fill="#000">
+                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                </svg>
+                            </div>
+
+                            <div class="btn-seguir-artista">
+                                <p class="btn-seguir-artista-texto">Seguir</p>
+                            </div>
+
+                        </div><!--FINAL  contenedor de los botones del contenido artista-->
+
+                        <h2 class="sub-titulo">Populares </h2>
+
+
+                        <div class="canciones-cantante"><!--contenedor de CANCIONES artista-->
+
+                            <div class="contenedor-cancion-artista"><!-- cancion del artista-->
+                                <div class="contenedor-btn-enumeracion-reproducir">
+                                    <button class="play-button">
+                                        <span class="number">1</span>
+                                        <span class="play-icon">&#9658;</span>
+                                    </button>
+                                </div>
+                                <div class="contenedor-img-cuadrada-cancion">
+                                    <img src="/IMG/lunaimg.jpeg" alt="Descripción de la imagen">
+                                </div>
+                                <span class="song-name">LUNA</span>
+                                <span class="song-reps">528.072.500</span>
+                                <button class="favorite-button">
+                                    <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20"
+                                        width="18" height="18">
+                                        <path
+                                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                    </svg>
+                                </button>
+                                <span class="song-duration">3:16</span>
+                            </div><!-- FINAL cancion del artista-->
+                            <div class="contenedor-cancion-artista"><!-- cancion del artista-->
+                                <div class="contenedor-btn-enumeracion-reproducir">
+                                    <button class="play-button">
+                                        <span class="number">2</span>
+                                        <span class="play-icon">&#9658;</span>
+                                    </button>
+                                </div>
+                                <div class="contenedor-img-cuadrada-cancion">
+                                    <img src="/IMG/perronegroimg.jpeg" alt="Descripción de la imagen">
+                                </div>
+                                <span class="song-name">PERRO NEGRO</span>
+                                <span class="song-reps">528.072.500</span>
+                                <button class="favorite-button">
+                                    <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20"
+                                        width="18" height="18">
+                                        <path
+                                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                    </svg>
+                                </button>
+                                <span class="song-duration">3:16</span>
+                            </div><!-- FINAL cancion del artista-->
+
+                            <div class="contenedor-cancion-artista"><!-- cancion del artista-->
+                                <div class="contenedor-btn-enumeracion-reproducir">
+                                    <button class="play-button">
+                                        <span class="number">3</span>
+                                        <span class="play-icon">&#9658;</span>
+                                    </button>
+                                </div>
+                                <div class="contenedor-img-cuadrada-cancion">
+                                    <img src="/IMG/offlineimg.jpeg" alt="Descripción de la imagen">
+                                </div>
+                                <span class="song-name">offline</span>
+                                <span class="song-reps">528.072.500</span>
+                                <button class="favorite-button">
+                                    <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20"
+                                        width="18" height="18">
+                                        <path
+                                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                    </svg>
+                                </button>
+                                <span class="song-duration">3:16</span>
+                            </div><!-- FINAL cancion del artista-->
+
+                            <div class="contenedor-cancion-artista"><!-- cancion del artista-->
+                                <div class="contenedor-btn-enumeracion-reproducir">
+                                    <button class="play-button">
+                                        <span class="number">4</span>
+                                        <span class="play-icon">&#9658;</span>
+                                    </button>
+                                </div>
+                                <div class="contenedor-img-cuadrada-cancion">
+                                    <img src="/IMG/lunaimg.jpeg" alt="Descripción de la imagen">
+                                </div>
+                                <span class="song-name">CLASSY 101</span>
+                                <span class="song-reps">528.072.500</span>
+                                <button class="favorite-button">
+                                    <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20"
+                                        width="18" height="18">
+                                        <path
+                                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                    </svg>
+                                </button>
+                                <span class="song-duration">3:16</span>
+                            </div><!-- FINAL cancion del artista-->
+
+                            <div class="contenedor-cancion-artista"><!-- cancion del artista-->
+                                <div class="contenedor-btn-enumeracion-reproducir">
+                                    <button class="play-button">
+                                        <span class="number">5</span>
+                                        <span class="play-icon">&#9658;</span>
+                                    </button>
+                                </div>
+                                <div class="contenedor-img-cuadrada-cancion">
+                                    <img src="/IMG/felizcumpleimg.jpeg" alt="Descripción de la imagen">
+                                </div>
+                                <span class="song-name">Feliz Cumpleaños</span>
+                                <span class="song-reps">528.072.500</span>
+                                <button class="favorite-button">
+                                    <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20"
+                                        width="18" height="18">
+                                        <path
+                                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                    </svg>
+                                </button>
+                                <span class="song-duration">3:16</span>
+                            </div><!-- FINAL cancion del artista-->
+
+                            <div class="contenedor-canciones-ocultas" id="contenedor-canciones-ocultas">
+                                <!-- canciones ocultas-->
+
+                                <div class="contenedor-cancion-artista"><!-- cancion del artista-->
+                                    <div class="contenedor-btn-enumeracion-reproducir">
+                                        <button class="play-button">
+                                            <span class="number">6</span>
+                                            <span class="play-icon">&#9658;</span>
+                                        </button>
+                                    </div>
+                                    <div class="contenedor-img-cuadrada-cancion">
+                                        <img src="/IMG/lunaimg.jpeg" alt="Descripción de la imagen">
+                                    </div>
+                                    <span class="song-name">LUNA</span>
+                                    <span class="song-reps">528.072.500</span>
+                                    <button class="favorite-button">
+                                        <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20"
+                                            width="18" height="18">
+                                            <path
+                                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                        </svg>
+                                    </button>
+                                    <span class="song-duration">3:16</span>
+                                </div><!-- FINAL cancion del artista-->
+                                <div class="contenedor-cancion-artista"><!-- cancion del artista-->
+                                    <div class="contenedor-btn-enumeracion-reproducir">
+                                        <button class="play-button">
+                                            <span class="number">7</span>
+                                            <span class="play-icon">&#9658;</span>
+                                        </button>
+                                    </div>
+                                    <div class="contenedor-img-cuadrada-cancion">
+                                        <img src="/IMG/perronegroimg.jpeg" alt="Descripción de la imagen">
+                                    </div>
+                                    <span class="song-name">PERRO NEGRO</span>
+                                    <span class="song-reps">528.072.500</span>
+                                    <button class="favorite-button">
+                                        <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20"
+                                            width="18" height="18">
+                                            <path
+                                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                        </svg>
+                                    </button>
+                                    <span class="song-duration">3:16</span>
+                                </div><!-- FINAL cancion del artista-->
+
+                                <div class="contenedor-cancion-artista"><!-- cancion del artista-->
+                                    <div class="contenedor-btn-enumeracion-reproducir">
+                                        <button class="play-button">
+                                            <span class="number">8</span>
+                                            <span class="play-icon">&#9658;</span>
+                                        </button>
+                                    </div>
+                                    <div class="contenedor-img-cuadrada-cancion">
+                                        <img src="/IMG/offlineimg.jpeg" alt="Descripción de la imagen">
+                                    </div>
+                                    <span class="song-name">offline</span>
+                                    <span class="song-reps">528.072.500</span>
+                                    <button class="favorite-button">
+                                        <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20"
+                                            width="18" height="18">
+                                            <path
+                                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                        </svg>
+                                    </button>
+                                    <span class="song-duration">3:16</span>
+                                </div><!-- FINAL cancion del artista-->
+
+                                <div class="contenedor-cancion-artista"><!-- cancion del artista-->
+                                    <div class="contenedor-btn-enumeracion-reproducir">
+                                        <button class="play-button">
+                                            <span class="number">9</span>
+                                            <span class="play-icon">&#9658;</span>
+                                        </button>
+                                    </div>
+                                    <div class="contenedor-img-cuadrada-cancion">
+                                        <img src="/IMG/lunaimg.jpeg" alt="Descripción de la imagen">
+                                    </div>
+                                    <span class="song-name">CLASSY 101</span>
+                                    <span class="song-reps">528.072.500</span>
+                                    <button class="favorite-button">
+                                        <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20"
+                                            width="18" height="18">
+                                            <path
+                                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                        </svg>
+                                    </button>
+                                    <span class="song-duration">3:16</span>
+                                </div><!-- FINAL cancion del artista-->
+
+                                <div class="contenedor-cancion-artista"><!-- cancion del artista-->
+                                    <div class="contenedor-btn-enumeracion-reproducir">
+                                        <button class="play-button">
+                                            <span class="number">10</span>
+                                            <span class="play-icon">&#9658;</span>
+                                        </button>
+                                    </div>
+                                    <div class="contenedor-img-cuadrada-cancion">
+                                        <img src="/IMG/felizcumpleimg.jpeg" alt="Descripción de la imagen">
+                                    </div>
+                                    <span class="song-name">Feliz Cumpleaños</span>
+                                    <span class="song-reps">528.072.500</span>
+                                    <button class="favorite-button">
+                                        <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20"
+                                            width="18" height="18">
+                                            <path
+                                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                        </svg>
+                                    </button>
+                                    <span class="song-duration">3:16</span>
+                                </div><!-- FINAL cancion del artista-->
+                            </div> <!-- final canciones ocultas-->
+
+                        </div><!--FINAL  contenedor de CANCIONES artista-->
+
+                        <button class="btn-mostrar-mas-menos" id="btn-mostrar-mas-menos">Mostrar más</button>
+
+                        <div class="contenedor-albumes"><!-- contenedor de Albumes artista-->
+                            <div class="contenedor-albumes-populares">
+                                <!-- Contenido de la sección de ALBUMES POPULARES -->
+                                <h2>Albumes</h2>
+                                <div class="contenedor-seccion"> <!-- CONTENEDOR DE LA SECCION -->
+
+                                    <div class="contenedor-item-seccion"><!-- ALBUM -->
+                                        <div class="contenedor-imagen-cuadrada">
+                                            <img src="/IMG/ferxxocalipis.jpeg" alt="Descripción de la imagen">
+                                            <div class="reproducir-icono">
+                                                <svg class="icono-reproducir" xmlns="http://www.w3.org/2000/svg"
+                                                    height="27" width="32" viewBox="0 0 21 24" fill="#000">
+                                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <p class="nombre-item-seccion">FERXXOCALIPSIS</h5>
+                                        <p class="nombre-seccion">2023</p>
+                                    </div><!--FIN ALBUM -->
+
+                                    <div class="contenedor-item-seccion"><!-- ALBUM -->
+                                        <div class="contenedor-imagen-cuadrada">
+                                            <img src="/IMG/unveranosinticaratula.jpg" alt="Descripción de la imagen">
+                                            <div class="reproducir-icono">
+                                                <svg class="icono-reproducir" xmlns="http://www.w3.org/2000/svg"
+                                                    height="27" width="32" viewBox="0 0 21 24" fill="#000">
+                                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <p class="nombre-item-seccion">Un Verano Sin Ti</h5>
+                                        <p class="nombre-seccion">2024</p>
+                                    </div><!--FIN ALBUM -->
+
+                                    <div class="contenedor-item-seccion"><!-- ALBUM -->
+                                        <div class="contenedor-imagen-cuadrada">
+                                            <img src="/IMG/mananaseracaratula.jpg_large" alt="Descripción de la imagen">
+                                            <div class="reproducir-icono">
+                                                <svg class="icono-reproducir" xmlns="http://www.w3.org/2000/svg"
+                                                    height="27" width="32" viewBox="0 0 21 24" fill="#000">
+                                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <p class="nombre-item-seccion">MAÑANA SERA...</h5>
+                                        <p class="nombre-seccion">2019</p>
+                                    </div><!--FIN ALBUM -->
+
+                                    <div class="contenedor-item-seccion"><!-- ALBUM -->
+                                        <div class="contenedor-imagen-cuadrada">
+                                            <img src="/IMG/endormirsinmadridcaratyula.jpeg"
+                                                alt="Descripción de la imagen">
+                                            <div class="reproducir-icono">
+                                                <svg class="icono-reproducir" xmlns="http://www.w3.org/2000/svg"
+                                                    height="27" width="32" viewBox="0 0 21 24" fill="#000">
+                                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <p class="nombre-item-seccion">en dormir sin Madrid</h5>
+                                        <p class="nombre-seccion">2018</p>
+                                    </div><!--FIN ALBUM -->
+                                    <span style="display:inline-block;width:2000px;"></span>
+
+
+                                </div> <!-- FINAL CONTENEDOR DE LA SECCION -->
+                            </div><!--FINAL Contenido de la sección de ALBUMES POPULARES -->
+                        </div><!--FINAL  contenedor de ALBUMES artista-->
+
+
+
+                        <span style="display:inline-block;height:300px;"></span>
+
+                    </div><!--FINAL Contenedor de las canciones y albumes del artista-->
+
+                </div><!-- final CONTENIDO CANTANTE -->
+
+                <div class="contenedor-pagina-album" id="contenedor-pagina-album"><!-- contenedor de la pagina album-->
+                        
+                    <div class="contenido-encabezado-album"><!-- encabezado ALBUM -->
+
+
+                        <div class="contenedor-encabezado-album">
+                           <div class="contenedor-imagen-encabezado-album">
+                            <img src="../IMG/lunacaratula.jpeg" alt="" width="180px" height="180px">
+                           </div>
+                           <div class="contenido-encabezado">
+                                <h4>
+                                    Álbum</h4>
+                                <h1>FERXXOCALIPSIS</h1>
+                                <div class="info-album">
+                                    <div class="contenedor-circular-img-perfil">
+                                        <img src="../IMG/feid.jpeg" alt="" width="23px" height="23px">
+                                    </div>
+                                    <div class="contenedor-texto-info">
+                                        <h5>Feid</h5>
+                                        <p><span class="punto-medio">&middot;</span> 2023 <span class="punto-medio">&middot;</span> 10 canciones, 25 min 34 s</p>
+                                    </div>
+                                    
+                                </div>
+                           </div>
+                        </div>
+
+
+                        <div class="contenido-album">
+                            <div class="contenedor-botones-canciones-cantante">
+                                <!-- contenedor de los botones del contenido artista-->
+                                <div class="fondo-icono-reproducir">
+                                    <svg class="icono-reproducir2" xmlns="http://www.w3.org/2000/svg" height="25" width="32"
+                                        viewBox="0 0 21 24" fill="#000">
+                                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                    </svg>
+                                </div>
+    
+                                <button class="favorite-button-2">
+                                    <svg class="heart-icon-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 24"
+    width="45" height="45">
+    <path
+        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+</svg>
+
+                                </button>
+    
+                            </div><!--FINAL  contenedor de los botones del contenido artista-->
+                        </div>
+                        <span style="display:inline-block;height:300px;"></span>
+                       
+                    </div><!-- final encabezado ALBUM -->
+                </div><!--FINAL contenedor de la pagina album-->
+
+                <div class="contenedor-pagina-lista" id="contenedor-pagina-lista"><!-- contenedor de la pagina lista-->
+
+                </div><!--FINAL contenedor de la pagina lista-->
+
+                <div class="contenedor-pagina-cancion" id="contenedor-pagina-cancion"><!-- contenedor de la pagina cancion-->
+
+                </div><!--FINAL contenedor de la pagina cancion-->
+
+            </div><!-- FIN DEL CONTENEDOR DERECHO -->
+
+        </div><!--FINAL contenido del landingPage en general -->
+
+        <div class="reproductor-audio"><!--contenedor del reproductor de audio-->
+            <div class="controls"> <!-- Contenedor de los botones de control -->
+                <!-- Botón para reproducir la canción anterior -->
+                <button class="control-button" onclick="previousTrack()">&#9664;&#9664;</button>
+                <!-- Botón para retroceder 10 segundos -->
+                <button class="control-button" onclick="skipBackward()">&#9664; 10s</button>
+                <!-- Botón para adelantar 10 segundos -->
+                <button class="control-button" onclick="skipForward()">10s &#9654;</button>
+                <!-- Botón para reproducir la siguiente canción -->
+                <button class="control-button" onclick="nextTrack()">&#9654;&#9654;</button>
+            </div> <!-- final Contenedor de los botones de control -->
+            <audio id="audioPlayer" controls>
+                <source id="audioSource" src="" type="audio/mpeg">
+                Tu navegador no soporta la reproducción de audio.
+            </audio>
+        </div><!--final contenedor del reproductor de audio-->
+    </div><!--FINAL del contenedor todo-->
+
+</body>
+
+</html>

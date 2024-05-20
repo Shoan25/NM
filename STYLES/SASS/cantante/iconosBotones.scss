@@ -1,0 +1,85 @@
+
+.contenedor-botones-canciones-cantante{
+    margin-top: 21px;
+    margin-bottom: 33px;
+    height: 54px;
+    width: 250px;
+    margin-left: -4.5px;
+    display: flex;
+    align-items: center;
+}
+
+
+.fondo-icono-reproducir{
+    height: 54px;
+    width: 54px;
+    background-color: #1abb54;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: 5px;
+    transition: box-shadow 0.1s ease-in-out; /* Agrega una transición suave al cambio de tamaño del borde */
+    border: 1px solid transparent; /* Añade un borde transparente al botón */
+
+}
+
+.reproducir-icono2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 200px;
+    right: 22px; /* Mueve el icono hacia la derecha para que sobresalga */
+    width: 4433px; /* Ancho del icono de reproducción */
+    height: 4334px; /* Alto del icono de reproducción */
+    background-color: #1abb54; /* Color de fondo del icono */
+    border-radius: 50%; /* Forma circular */
+}
+
+.reproducir-icono2:hover {
+    transform: scale(1.04);
+}
+
+
+.fondo-icono-reproducir:hover{
+    box-shadow: 0 0 0 1.1px #1abb54; /* Aumenta el tamaño del borde al pasar el cursor sobre el botón */
+    cursor: pointer;
+}
+
+.icono-reproducir2{
+    transition: transform 0.1s ease-in-out; /* Transición suave al cambio de tamaño */    
+}
+.fondo-icono-reproducir:hover .icono-reproducir2{
+   transform: scale(1.06);
+
+}
+
+
+
+.btn-seguir-artista{
+    cursor: pointer;
+ height: 32px;
+ width: 70px;
+ background-color: #12121200;
+ border-radius: 20px;
+ margin-left: 27px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border: 1px solid rgb(180, 182, 189);
+ transition: box-shadow 0.1s ease-in-out; /* Agrega una transición suave al cambio de tamaño del borde */
+    
+}
+
+.btn-seguir-artista-texto{
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.btn-seguir-artista:hover{
+    box-shadow: 0 0 0 0.2px #ffffff; /* Aumenta el tamaño del borde al pasar el cursor sobre el botón */
+ 
+   border: 1px solid rgb(255, 255, 255);
+
+   transform: scale(1.02);
+}
